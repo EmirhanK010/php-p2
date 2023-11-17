@@ -1,12 +1,15 @@
 <?php
+// Auteur: Emirhan Kaya
+// Functie: uitleg datum functie
 
-echo "<h1>Hallo wereld,</h1>";
-echo "Ik zit op het ";
+// Initialisatie
+$datum = date('l d F o');
 
-$schoolnaam = "Techniek College Rotterdam !";
+// main
+echo "De datum is: $datum";
 
-echo "$schoolnaam";
 
-$jaar "16"
+
+
 
 ?>
