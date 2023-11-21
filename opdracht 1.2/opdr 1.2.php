@@ -1,15 +1,37 @@
 <?php
 // Auteur: Emirhan Kaya
-// Functie: uitleg datum functie
+// Functie:  uitleg datum functie
+// Initialsatie 
+$datum = date('l d F Y').".";
+//  main
+echo "Het is vandaag: $datum";
+echo "<br>";
 
-// Initialisatie
-$datum = date('l d F o');
+echo "Vandaag is het de " . date('z'). "e dag van het jaar";
+echo "<br>";
 
-// main
-echo "De datum is: $datum";
+echo date('l') . " is de ". date('w'). "e dag van de week.";
+echo "<br>";
 
+echo "De maand ". date('F'). " heeft in totaal ". date('t'). " dagen.";
+echo "<br>";
 
+function isLeapYear ($year) {
+  if(!is_numeric($year)) {
+    echo "String is now allowed. Input should be a number.";
+    return;
+  }
 
+  if(($year%4 == 0 && $year%100!=0) || $year%400==0) {
+    echo "Het jaar $year is een schrikkeljaar";
 
+  }else{
+    echo "Het jaar $year is geen schrikkeljaar";
 
+  }
+
+}
+
+$year = date('Y');
+isLeapYear($year);
 ?>
