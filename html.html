@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number Game</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guess the Number Game</h1>
+  <p id="game-output">Probeer het getal te raden tussen 1 en 100.</p>
+  <input type="number" id="user-input" placeholder="Voer je gok in">
+  <button onclick="guessNumber()">Indienen</button>
+
+  <script>
+    const targetNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function guessNumber() {
+      const userGuess = parseInt(document.getElementById('user-input').value);
+
+      if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+        alert('Voer een geldig getal in tussen 1 en 100.');
+        return;
+      }
+
+      attempts++;
+
+      if (userGuess === targetNumber) {
+        alert(`Gefeliciteerd! Je hebt het getal geraden in ${attempts} pogingen.`);
+        resetGame();
+      } else if (userGuess < targetNumber) {
+        alert('Het getal is hoger. Probeer opnieuw.');
+      } else {
+        alert('Het getal is lager. Probeer opnieuw.');
+      }
+    }
+
+    function resetGame() {
+      targetNumber = Math.floor(Math.random() * 100) + 1;
+      attempts = 0;
+      document.getElementById('user-input').value = '';
+    }
+  </script>
+</body>
+</html>
