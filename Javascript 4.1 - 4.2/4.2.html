@@ -1,69 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tafel Generator</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tafel Generator</title>
 </head>
 <body>
 
-<script>
-    function generateTafel(getal) {
-        document.write(`<h2>Tafel van ${getal}</h2>`);
-        document.write("<table>");
-        for (let i = 1; i <= 10; i++) {
-            let resultaat = getal * i;
-            document.write(`<tr><td>${getal} x ${i}</td><td>=</td><td>${resultaat}</td></tr>`);
-        }
-        document.write("</table>");
-
-    }
-
-    // voorbeeld: Tafel van 1
-    generateTafel(1);
-
-    //voorbeeld: Tafel van 2
-    generateTafel(2);
-
-    // voorbeeld Tafel van 3 
-    generateTafel(3);
-
-    // Voorbeeld Tafel van 4 
-    generateTafel(4)
-
-    // Voorbeeld: Tafel van 5
-    generateTafel(5);
-
-    // Voorbeeld: Tafel van 6 
-    generateTafel(6);
-
-    //voorbeeld Tafel van 7
-    generateTafel(7);
-
-    // voorbeeld Tafel van 8
-    generateTafel(8);
-
-    // voorbeeld Tafel van 9 
-    generateTafel(9);
-
-
-   
-
-</script>
+<script src="4.2.js"></script> 
 
 </body>
 </html>
